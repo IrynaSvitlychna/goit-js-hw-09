@@ -69,11 +69,7 @@ const images = [
 
 const galleryList = document.querySelector(".gallery");
 
-{/* <li class="gallery-item">
-  <a class="gallery-link" href="large-image.jpg">
-    <img class="gallery-image" src="small-image.jpg" alt="Image description" />
-  </a>
-</li> */}
+
 
 const gallery = images.map(({ preview, original, description }) => `
 <li class="gallery-item">
