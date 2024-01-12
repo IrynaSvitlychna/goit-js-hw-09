@@ -2,9 +2,9 @@ import SimpleLightbox from "simplelightbox";
 
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-// import leftIcon  from "../img/bi_chevron-left.svg";
-// import rightIcon  from "../img/bi_chevron-right.svg";
-// import xIcon  from "../img/bi_x.svg";
+import leftIcon  from "/img/bi_chevron-left.svg";
+import rightIcon  from "/img/bi_chevron-right.svg";
+import xIcon  from "/img/bi_x.svg";
 
 
 
@@ -97,12 +97,13 @@ const gallery = images.map(({ preview, original, description }) => `
   
  galleryList.insertAdjacentHTML(`beforeend`, gallery);
 
- let lightbox = new SimpleLightbox('.gallery a');
-lightbox.on('show.simplelightbox', function () {
-	sourceAttr ("href");
-  captionsData ("alt");
-  navText ();
-  captionDelay (250);
-  captionPosition (`bottom`);
+ let lightbox = new SimpleLightbox('.gallery a', {
+	sourceAttr: "href",
+  captionsData: "alt",
+  navText: [
+    `<img src="${leftIcon}" alt=""></img>`,
+    `<img src="${rightIcon}" alt=""></img>`],
+  closeText: `<img src="${xIcon}" alt=""></img>`,
+  captionDelay: 250
 });
- 
+
