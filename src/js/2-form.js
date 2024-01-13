@@ -21,11 +21,9 @@ formListener.addEventListener("input", (event) => {
       if (email && message) {
         email.value = parsedData.email || "";
         message.value = parsedData.message || "";
-      }
-        
-                }
-      }
-    );
+      }    
+    }
+  });
 
 
 
